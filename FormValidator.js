@@ -3,6 +3,10 @@ class FormValidator {
 		let email_regex = /^([^"()])+(\@)[a-z]+(\.)[a-z]+$/i;
 		return email_regex.test(string) ? true : false;
 	}
+	static isValidAddress(string) {
+		let address_regex = /^(No) [0-9]+, ?[a-z0-9 -]+, ?[a-z -]+, ?[a-z -]+\.?$/;
+		return address_regex.test(string) ? true : false;
+	}
 	static isValidFullname(string) {
 		let fullname_regex = /^([a-z]{2,})+( ([a-z]{2,})+)+$/i;
 		return fullname_regex.test(string) ? true : false;
@@ -20,3 +24,6 @@ class FormValidator {
 		return website_regex.test(string) ? true : false;
 	}
 }
+console.log(
+FormValidator.isValidAddress('No 9, adekunle avenue cross,eti-osa lekki, lagos')
+)
