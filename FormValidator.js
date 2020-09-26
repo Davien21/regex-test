@@ -1,6 +1,6 @@
 class FormValidator {
 	static isValidEmail(string) {
-		let email_regex = /^([^"()])+(\@)[a-z]+(\.)[a-z]+$/i;
+		let email_regex = /^([^"( )])+(\@)[a-z]+(\.)[a-z]+$/i;
 		return email_regex.test(string) ? true : false;
 	}
 	static isValidAddress(string) {
